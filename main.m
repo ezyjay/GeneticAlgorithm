@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   TP1 - Métaheuristiques en optimisation
-%
-%   Esmé James - JAME15539504
+%   TP1 - MÃ©taheuristiques en optimisation
+% 
+%   EsmÃ© James - JAME15539504
 %   Wilfried Pouchous - POUW04069501
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -27,13 +27,13 @@ GAParameters.Pm = 0.1; %temp
 GAParameters.NbIndividusRemplacer = GAParameters.PopSize;  %temp
 GAParameters.KPointCrossOver = 4;
 
-UserInput.CritereArret = 1; %1 = Nb générations max, 2 = Rapport valeurs de fitness, 3 = %Taux changement valeur de fitness
+UserInput.CritereArret = 1; %1 = Nb gÃ©nÃ©rations max, 2 = Rapport valeurs de fitness, 3 = %Taux changement valeur de fitness
 UserInput.Selection = 1; %1 = RWS, 2 = Kill Tournament, 3 = SUS
-UserInput.Classement = 1; %1 = Linéaire ((a+i*(b-a)/(N-1))/N), 2 = Linéaire (q-r*(i-1)), 3 = Non Linéaire
-UserInput.ChgmtEchelle = 3; %1 = Linéaire, 2 = Troncature Sigma, 3 = Pas de changement échelle
+UserInput.Classement = 1; %1 = LinÃ©aire ((a+i*(b-a)/(N-1))/N), 2 = LinÃ©aire (q-r*(i-1)), 3 = Non LinÃ©aire
+UserInput.ChgmtEchelle = 3; %1 = LinÃ©aire, 2 = Troncature Sigma, 3 = Pas de changement Ã©chelle
 UserInput.Croisement = 4; %1 = SinglePoint, 2 = MultiplePoint, 3 = Uniform, 4 = WholeArithmetic, 5 = LocalArithmetic, 6 = Blend, 7 = SimulatedBinary, 8 = Three Parent
 UserInput.Mutation = 2; %1 = Bit-Flip, 2 = Uniform, 3 = Boundary, 4 = NonUniform, 5 = Normal, 6 = Polynomial
-UserInput.OperateurVariation = 1; %1 = Assigne valeur borne à individu si hors des bornes, 2 = Assigne 2*valBorne-valIndividus à individu si hors des bornes
+UserInput.OperateurVariation = 1; %1 = Assigne valeur borne Ã  individu si hors des bornes, 2 = Assigne 2*valBorne-valIndividus Ã  individu si hors des bornes
 UserInput.Remplacement = true;
 %###########################################################################################################
 
@@ -45,7 +45,7 @@ addpath(genpath('Problemes'));
 addpath(genpath('AlgoGenetique'));
 
 %-----------------------------------------
-%   Choix problème
+%   Choix problÃ¨me
 %-----------------------------------------
 switch (UserInput.Probleme)
     % 1 = Rosenbrock
@@ -63,7 +63,7 @@ switch (UserInput.Probleme)
 end
 
 %-----------------------------------------
-%   Appel de l'algorithme génétique
+%   Appel de l'algorithme gÃ©nÃ©tique
 %-----------------------------------------
 GA(UserInput,ProblemParameters,GAParameters);
 
